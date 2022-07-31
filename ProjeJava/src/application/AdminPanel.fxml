@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPanel">
+   <children>
+      <Button fx:id="btn_cikis" layoutX="25.0" layoutY="405.0" mnemonicParsing="false" onAction="#btn_cikis_clk" prefHeight="30.0" prefWidth="93.0" text="Çıkış Yap" />
+      <TabPane prefHeight="391.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ürünler">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table_urun" layoutX="31.0" layoutY="61.0" onMouseClicked="#table_urun_clk" prefHeight="230.0" prefWidth="413.0">
+                          <columns>
+                              <TableColumn fx:id="clm_id" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="clm_ad" prefWidth="110.0" text="Ad" />
+                            <TableColumn fx:id="clm_fiyat" prefWidth="90.0" text="Fiyat" />
+                              <TableColumn fx:id="clm_urun_tur" prefWidth="130.0" text="Ürün Türü" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="291.0" layoutY="14.0" prefHeight="22.0" prefWidth="58.0" text="Ürünler">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ara_urun_txt" layoutX="31.0" layoutY="23.0" onKeyPressed="#ara_urun_txt_keypress" promptText="arama yap" />
+                        <TextField fx:id="txt_urun_id" editable="false" layoutX="530.0" layoutY="49.0" />
+                        <TextField fx:id="txt_urun_ad" layoutX="531.0" layoutY="88.0" />
+                        <TextField fx:id="txt_urun_fiyat" layoutX="532.0" layoutY="128.0" />
+                        <TextField fx:id="txt_urun_tur" layoutX="533.0" layoutY="168.0" />
+                        <Label layoutX="465.0" layoutY="53.0" text="ID :" />
+                        <Label layoutX="465.0" layoutY="92.0" text="Ürün Adı :" />
+                        <Label layoutX="465.0" layoutY="132.0" text="Fiyat :" />
+                        <Label layoutX="465.0" layoutY="173.0" text="Ürün Türü :" />
+                        <Button fx:id="btn_urun_guncelle" layoutX="586.0" layoutY="215.0" mnemonicParsing="false" onAction="#btn_urun_guncelle_clk" prefHeight="30.0" prefWidth="94.0" text="Güncelle" />
+                        <Button fx:id="btn_urun_ekle" layoutX="525.0" layoutY="285.0" mnemonicParsing="false" onAction="#btn_urun_ekle_clk" prefHeight="30.0" prefWidth="94.0" text="Ekle" />
+                        <Button fx:id="btn_urun_sil" layoutX="183.0" layoutY="309.0" mnemonicParsing="false" onAction="#btn_urun_sil_clk" prefHeight="30.0" prefWidth="94.0" text="Sil" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Satın Almalar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="Satin_arama_txt" layoutX="32.0" layoutY="35.0" onKeyPressed="#satin_arama_txt_press" promptText="arama" />
+                        <TableView fx:id="table_satin" layoutX="32.0" layoutY="82.0" prefHeight="190.0" prefWidth="478.0">
+                          <columns>
+                            <TableColumn fx:id="clm_Sid" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="clm_miktar" prefWidth="75.0" text="Miktar" />
+                              <TableColumn fx:id="clm_Skul_tel" prefWidth="152.79998779296875" text="Telefon" />
+                              <TableColumn fx:id="clm_Skul_id" prefWidth="59.20001220703125" text="K_id" />
+                              <TableColumn fx:id="clm_Starih" prefWidth="115.20001220703125" text="Tarih" />
+                          </columns>
+                        </TableView>
+                        <DatePicker fx:id="Satin_date_bas" layoutX="543.0" layoutY="69.0" prefHeight="26.0" prefWidth="142.0" promptText="başlangıç" />
+                        <DatePicker fx:id="Satin_date_bit" layoutX="545.0" layoutY="127.0" prefHeight="26.0" prefWidth="139.0" promptText="bitiş" />
+                        <Button fx:id="btn_Ssorgu" layoutX="567.0" layoutY="182.0" mnemonicParsing="false" onAction="#btn_Ssorgu_clk" prefHeight="30.0" prefWidth="94.0" text="Sorgula" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Kullanıcılar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table_kullanicilar" layoutX="42.0" layoutY="67.0" onMouseClicked="#table_clk" prefHeight="187.0" prefWidth="393.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="ad" prefWidth="75.0" text="ad" />
+                              <TableColumn fx:id="soyad" prefWidth="75.0" text="soyad" />
+                              <TableColumn fx:id="telefon" prefWidth="90.0" text="telefon" />
+                              <TableColumn fx:id="bakiye" prefWidth="75.0" text="bakiye" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_kullanici_guncelle" layoutX="549.0" layoutY="258.0" mnemonicParsing="false" onAction="#btn_kullanici_guncelle_clk" prefHeight="30.0" prefWidth="94.0" text="Güncelle" />
+                        <Button fx:id="btn_kullanici_sil" layoutX="92.0" layoutY="273.0" mnemonicParsing="false" onAction="#btn_kullanici_sil_clk" prefHeight="30.0" prefWidth="94.0" text="Sil" />
+                        <Label layoutX="42.0" layoutY="23.0" prefHeight="18.0" prefWidth="72.0" text="Kullanıcılar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="460.0" layoutY="92.0" text="Ad :" />
+                        <Label layoutX="460.0" layoutY="135.0" text="Soyad :" />
+                        <Label layoutX="460.0" layoutY="179.0" text="Telefon :" />
+                        <TextField fx:id="ad_txt" layoutX="529.0" layoutY="88.0" />
+                        <TextField fx:id="soyad_txt" layoutX="529.0" layoutY="131.0" />
+                        <TextField fx:id="telefon_txt" layoutX="529.0" layoutY="175.0" />
+                        <Label layoutX="460.0" layoutY="215.0" text="Bakiye :" />
+                        <Label layoutX="460.0" layoutY="59.0" text="İD :" />
+                        <Label fx:id="id_lbl" layoutX="578.0" layoutY="58.0" prefHeight="18.0" prefWidth="36.0" />
+                        <Label fx:id="bakiye_lbl" layoutX="530.0" layoutY="214.0" prefHeight="18.0" prefWidth="147.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Yüklemeler">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table_yukle" layoutX="42.0" layoutY="65.0" prefHeight="200.0" prefWidth="550.0">
+                          <columns>
+                            <TableColumn fx:id="clm_yukle_id" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="clm_yukle_miktar" prefWidth="100.00000762939453" text="Miktar" />
+                              <TableColumn fx:id="clm_yukle_tel" prefWidth="161.5999755859375" text="Telefon" />
+                              <TableColumn fx:id="clm_yukle_Kid" prefWidth="80.79998779296875" text="K_id" />
+                              <TableColumn fx:id="clm_yukle_tarih" prefWidth="131.99996948242188" text="Tarih" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="Yukle_ara_txt" layoutX="42.0" layoutY="23.0" onKeyPressed="#Yukle_ara_txt_press" promptText="Ara" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

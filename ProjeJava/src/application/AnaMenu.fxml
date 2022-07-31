@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="554.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnaMenuController">
+   <children>
+      <Button fx:id="menu_btn" layoutX="51.0" layoutY="32.0" mnemonicParsing="false" onAction="#menu_clk" prefHeight="31.0" prefWidth="84.0" text="Menü">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/Menu_48px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <AnchorPane fx:id="anchor_hamb" layoutX="-200.0" layoutY="98.0" prefHeight="445.0" prefWidth="160.0">
+         <children>
+            <ToggleButton fx:id="kahve_btn" mnemonicParsing="false" onAction="#kahve_btn_clk" prefHeight="40.0" prefWidth="160.0" text="Kahveler" />
+      <ToggleButton fx:id="tatli_btn" layoutY="40.0" mnemonicParsing="false" onAction="#tatli_btn_clk" prefHeight="40.0" prefWidth="160.0" text="Tatlılar" />
+      <ToggleButton fx:id="sicak_icecek_btn" layoutY="120.0" mnemonicParsing="false" onAction="#sicak_icecek_btn_clk" prefHeight="40.0" prefWidth="160.0" text="Sıcak İçecekler" />
+      <ToggleButton fx:id="soguk_icecek_btn" layoutY="80.0" mnemonicParsing="false" onAction="#soguk_icecek_btn_clk" prefHeight="40.0" prefWidth="160.0" text="Soğuk İçecekler" />
+      <ToggleButton fx:id="yiyecek_btn" layoutY="160.0" mnemonicParsing="false" onAction="#yiyecek_btn_clk" prefHeight="40.0" prefWidth="160.0" text="Yiyecekler" />
+      
+         </children></AnchorPane>
+      <Label layoutX="184.0" layoutY="152.0" prefHeight="18.0" prefWidth="55.0" text="Ürünler" />
+      <Label layoutX="388.0" layoutY="449.0" text="Sepetiniz :" />
+      <Button fx:id="satinal_btn" layoutX="623.0" layoutY="442.0" mnemonicParsing="false" onAction="#satinal_btn_clk" prefHeight="31.0" prefWidth="94.0" text="Satın al">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/buy_60px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TableView fx:id="table_uruns" layoutX="185.0" layoutY="184.0" onMouseClicked="#table_uruns_clk" prefHeight="219.0" prefWidth="462.0">
+        <columns>
+          <TableColumn fx:id="menuClm_urun_ad" prefWidth="167.99993896484375" text="Ad">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/resimler/name_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+          <TableColumn fx:id="menuClm_urun_fiyat" prefWidth="99.20001220703125" text="Fiyat">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/resimler/Us%20Dollar%20Circled_60px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="menuClm_urun_tur" prefWidth="195.99996948242188" text="Ürün Türü">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/resimler/food_bar_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="ckss_btn" layoutX="628.0" layoutY="124.0" mnemonicParsing="false" onAction="#ckss_btn_clk" prefHeight="28.0" prefWidth="84.0" text="Çıkış">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/exit_sign_100px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="sepet_txt" editable="false" layoutX="459.0" layoutY="445.0" promptText="sepetinize ürün ekleyin." />
+      <TextField fx:id="ara_txt" layoutX="307.0" layoutY="148.0" onKeyPressed="#ara_txtKeyPressed" promptText="arama yapın.." />
+      <Label fx:id="hos_lbl" layoutX="307.0" layoutY="35.0" text="Hoşgeldiniz" />
+      <Button fx:id="hesap_btn" layoutX="466.0" layoutY="26.0" mnemonicParsing="false" onAction="#hesap_btn_clk" prefHeight="74.0" prefWidth="94.0" text="Hesap">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/account_60px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="Kbakiye_lbl" layoutX="370.0" layoutY="64.0" text="Label" />
+      <Label layoutX="307.0" layoutY="64.0" text="Bakiyeniz :" />
+      <Button fx:id="sepet_sil_btn" layoutX="466.0" layoutY="484.0" mnemonicParsing="false" onAction="#sepet_sil_btn_clk" prefHeight="31.0" prefWidth="132.0" text="Sepeti Temizle">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/trash_52px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ListView fx:id="liste" layoutX="184.0" layoutY="442.0" prefHeight="86.0" prefWidth="191.0" />
+      <Label layoutX="238.0" layoutY="417.0" text="Sepetinizdekiler" />
+   </children>
+</AnchorPane>

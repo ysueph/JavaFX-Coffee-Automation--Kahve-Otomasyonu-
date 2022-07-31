@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="375.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <Label layoutX="80.0" layoutY="154.0" text="Telefon:" />
+      <Label layoutX="80.0" layoutY="198.0" prefHeight="18.0" prefWidth="42.0" text="Şifre:" />
+      <Label layoutX="183.0" layoutY="111.0" text="GİRİŞ" />
+      <TextField fx:id="txt_tel" layoutX="136.0" layoutY="150.0" />
+      <Button fx:id="giris" layoutX="113.0" layoutY="235.0" mnemonicParsing="false" onAction="#giris_clk" text="Giriş yap">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/enter_60px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      
+      <Button fx:id="kayit" layoutX="218.0" layoutY="235.0" mnemonicParsing="false" onAction="#kayit_clk" text="Kayıt ol">         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/add_user_male_60px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+         
+         
+      <Button fx:id="admin_giris" layoutX="247.0" layoutY="316.0" mnemonicParsing="false" onAction="#admin_giris_clk" prefHeight="30.0" prefWidth="124.0" text="Admin girişi">         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/administrative_tools_48px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+         
+         
+      <PasswordField fx:id="txt_sifre" layoutX="136.0" layoutY="194.0" />
+      <Pane layoutX="1.0" prefHeight="85.0" prefWidth="400.0" style="-fx-background-color: #cadefc;">
+         <children>
+            <ImageView fx:id="img" fitHeight="69.0" fitWidth="65.0" layoutX="320.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/resimler/coffee_pot_60px.png" />
+               </image>
+            </ImageView>
+            <Text fill="#c24d2c" fontSmoothingType="LCD" layoutX="21.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kahve Otomasyonuna Hoşgeldiniz" wrappingWidth="264.056396484375">
+               <font>
+                  <Font name="Serif Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminLoginController">
+   <children>
+      <Label layoutX="54.0" layoutY="117.0" text="Kullanıcı Adı:" />
+      <Label layoutX="94.0" layoutY="167.0" text="Şifre:" />
+      <TextField fx:id="Akullanici_txt" layoutX="139.0" layoutY="113.0" />
+      <Button fx:id="Agiris" layoutX="289.0" layoutY="274.0" mnemonicParsing="false" onAction="#Agiris_clk" text="Giriş" />
+      <Button fx:id="geri" layoutX="63.0" layoutY="323.0" mnemonicParsing="false" onAction="#geri_clk" text="Geri dön" />
+      <PasswordField fx:id="Asifre_txt" layoutX="139.0" layoutY="163.0" />
+      <Label layoutX="30.0" layoutY="227.0" text="Güvenlik Sorgusu :" />
+      <TextField fx:id="textA" editable="false" layoutX="144.0" layoutY="223.0" prefHeight="26.0" prefWidth="34.0" />
+      <TextField fx:id="textB" editable="false" layoutX="200.0" layoutY="223.0" prefHeight="26.0" prefWidth="34.0" />
+      <Label layoutX="186.0" layoutY="227.0" text="+" />
+      <Label layoutX="244.0" layoutY="227.0" text="=" />
+      <TextField fx:id="sonuc" layoutX="265.0" layoutY="223.0" prefHeight="26.0" prefWidth="54.0" />
+   </children>
+</AnchorPane>
